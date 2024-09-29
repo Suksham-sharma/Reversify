@@ -1,8 +1,15 @@
 # Reverse Proxy for Docker Containers
 
-## What is Traefik?
+## What are we building?
 
-[Traefik](https://traefik.io/) is a modern, dynamic reverse proxy specifically designed to work with microservices and containers. It provides automatic configuration updates when containers are added or removed, making it an excellent tool for handling dynamic environments like Docker Conatiners.
+We are creating our own **dynamic reverse proxy** similar to [Traefik](https://traefik.io/). This project serves as a learning exercise to better understand Docker networking and reverse proxy management.
+
+## Tools Used:
+
+- **Node.js** / **Express.js**
+- **Ports**:
+  - **8080**: Management API for starting, stopping, and listening to containers.
+  - **80**: For reverse proxy routing.
 
 ## What is a Reverse Proxy?
 
@@ -64,7 +71,7 @@ For example, if you spin up two containers named `nginx1` and `nginx2`, Traefik 
 
 You can now access them via these subdomains without needing to expose individual ports, enhancing security and simplifying management.
 
-## Benefits of Traefik
+## Benefits of using Dynamic Reverse Proxy
 
 - **Dynamic Routing:** Automatically configures routes when containers are added or removed.
 - **Enhanced Security:** Containers are accessed via Traefik, not directly via exposed ports.
